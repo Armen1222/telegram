@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<form method="POST" action="/add">
+    <input style="width: 50%;" type="text" name="name" placeholder="Անվանում"><br><br>
+    <input style="width: 50%;" type="text" name="link" placeholder="հասցե">
+    <input type="submit" value="Ավելացնել">
+</form><br>
+
+{{#each conditions}}
+    <div><a href="/delete/{{_id}}">Delete</a> {{name}} - {{conditions}}</div>
+{{/each}}
